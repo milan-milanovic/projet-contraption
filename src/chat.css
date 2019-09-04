@@ -1,0 +1,38 @@
+#app {
+    background-color: red;
+}
+
+.chat {
+    /* border: 1px solid black; */
+    width: 67px;
+    height: 59px;
+    position: absolute;
+    background-image: url(../media/cat.png);
+    background-position-y: 0px;
+    animation-name: walk;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-timing-function: steps(8);
+    animation-duration: 500ms;
+}
+@keyframes deplacement {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes walk {
+    0% {
+        background-position-y: -59px;
+        background-position-x: -0px;
+    }
+
+    100% {
+        background-position-y: -59px;
+        background-position-x: calc(-67px *8);
+    }
+}
